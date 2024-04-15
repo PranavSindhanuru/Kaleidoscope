@@ -5,6 +5,13 @@ import molten_swirl from '../image/molten_swirl.jpg'
 import shimmering_strands from '../image/shimmering_strands.jpg'
 import tidal_gradient from '../image/tidal_gradient.jpg'
 
+import chromatic_cascade_small from '../image/chromatic_cascade_small.jpg'
+import chromatic_fusion_small from '../image/chromatic_fusion_small.webp'
+import crimson_riptide_small from '../image/crimson_riptide_small.jpg'
+import molten_swirl_small from '../image/molten_swirl_small.jpg'
+import shimmering_strands_small from '../image/shimmering_strands_small.jpg'
+import tidal_gradient_small from '../image/tidal_gradient_small.jpg'
+
 function Space({ image }: any) {
     return (
         <div className="relative h-full w-full">
@@ -137,21 +144,39 @@ function Image({ image }: any) {
 
     return (
         <>
-            <img src={
-                image === 'chromatic_cascade' ? chromatic_cascade
-                    :
-                    image === 'chromatic_fusion' ? chromatic_fusion
+            {window.innerWidth > 450 ?
+                <img src={
+                    image === 'chromatic_cascade' ? chromatic_cascade
                         :
-                        image === 'crimson_riptide' ? crimson_riptide
+                        image === 'chromatic_fusion' ? chromatic_fusion
                             :
-                            image === 'molten_swirl' ? molten_swirl
+                            image === 'crimson_riptide' ? crimson_riptide
                                 :
-                                image === 'shimmering_strands' ? shimmering_strands
+                                image === 'molten_swirl' ? molten_swirl
                                     :
-                                    image === 'tidal_gradient' ? tidal_gradient
+                                    image === 'shimmering_strands' ? shimmering_strands
                                         :
-                                        ''
-            } alt="" className={`animate-rotate`} />
+                                        image === 'tidal_gradient' ? tidal_gradient
+                                            :
+                                            ''
+                } alt="" className={`animate-rotate`} />
+                :
+                <img src={
+                    image === 'chromatic_cascade' ? chromatic_cascade_small
+                        :
+                        image === 'chromatic_fusion' ? chromatic_fusion_small
+                            :
+                            image === 'crimson_riptide' ? crimson_riptide_small
+                                :
+                                image === 'molten_swirl' ? molten_swirl_small
+                                    :
+                                    image === 'shimmering_strands' ? shimmering_strands_small
+                                        :
+                                        image === 'tidal_gradient' ? tidal_gradient_small
+                                            :
+                                            ''
+                } alt="" className={`animate-rotate`} />
+            }
         </>
     )
 }
