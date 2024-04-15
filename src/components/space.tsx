@@ -1,9 +1,9 @@
-import chromatic_cascade from '../image/chromatic_cascade.jpg'
-import chromatic_fusion from '../image/chromatic_fusion.webp'
-import crimson_riptide from '../image/crimson_riptide.jpg'
-import molten_swirl from '../image/molten_swirl.jpg'
-import shimmering_strands from '../image/shimmering_strands.jpg'
-import tidal_gradient from '../image/tidal_gradient.jpg'
+// import chromatic_cascade from '../image/chromatic_cascade.jpg'
+// import chromatic_fusion from '../image/chromatic_fusion.webp'
+// import crimson_riptide from '../image/crimson_riptide.jpg'
+// import molten_swirl from '../image/molten_swirl.jpg'
+// import shimmering_strands from '../image/shimmering_strands.jpg'
+// import tidal_gradient from '../image/tidal_gradient.jpg'
 
 function Space({ image }: any) {
     return (
@@ -123,17 +123,17 @@ function Image({ image }: any) {
     return (
         <>
             <img src={
-                image === 'chromatic_cascade' ? chromatic_cascade
+                image === 'chromatic_cascade' ? 'https://ik.imagekit.io/pranavsindhanuru/kaleidoscope/chromatic_cascade.jpg?updatedAt=1713206851148'
                     :
-                    image === 'chromatic_fusion' ? chromatic_fusion
+                    image === 'chromatic_fusion' ? 'https://ik.imagekit.io/pranavsindhanuru/kaleidoscope/chromatic_fusion.webp?updatedAt=1713206851739'
                         :
-                        image === 'crimson_riptide' ? crimson_riptide
+                        image === 'crimson_riptide' ? 'https://ik.imagekit.io/pranavsindhanuru/kaleidoscope/crimson_riptide.jpg?updatedAt=1713206851489'
                             :
-                            image === 'molten_swirl' ? molten_swirl
+                            image === 'molten_swirl' ? 'https://ik.imagekit.io/pranavsindhanuru/kaleidoscope/molten_swirl.jpg?updatedAt=1713206851365'
                                 :
-                                image === 'shimmering_strands' ? shimmering_strands
+                                image === 'shimmering_strands' ? 'https://ik.imagekit.io/pranavsindhanuru/kaleidoscope/shimmering_strands.jpg?updatedAt=1713206850525'
                                     :
-                                    image === 'tidal_gradient' ? tidal_gradient
+                                    image === 'tidal_gradient' ? 'https://ik.imagekit.io/pranavsindhanuru/kaleidoscope/tidal_gradient.jpg?updatedAt=1713206851079'
                                         :
                                         ''
             } alt="" className={`animate-rotate`} />
