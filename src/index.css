@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-rotate {
+    animation: rotate 10s linear infinite;
+    transform-origin: 50% 50% 0;
+    transform: translateZ(0);
+    width: 200%;
+    height: 200%;
+    scale: 1.7;
+    object-fit: cover;
+}
