@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import Space from './components/space'
 import './index.css'
+import logo from './image/logo.svg'
 
 function App() {
 
 	const [image, setImage] = useState('chromatic_cascade')
-
+	console.log(navigator.userAgent)
 	return (
 		<div className="h-[100vh] overflow-hidden relative">
 			<SideBar setImage={setImage} image={image} />
@@ -46,15 +47,17 @@ function SideBar({ setImage, image }: any) {
 			{window.innerWidth > 450 ?
 				<>
 					<div className={`transition-all h-full p-2 ${expand ? 'scale-x-0 opacity-0' : 'scale-x-1'}`}>
-						<div className="p-5 bg-white/[0.5] backdrop-blur-[8px] rounded border cursor-pointer" onClick={() => setExpand(true)}>
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+						<div className="p-5 bg-white/[0.5] flex items-center backdrop-blur-[8px] rounded border cursor-pointer" onClick={() => setExpand(true)}>
+							<img src={logo} alt="" className="h-[30px]" />
+							<div className="ml-5 text-lg font-bold">Kaleidoscope</div>
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 ml-5 hover:scale-[1.1]">
 								<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 							</svg>
 						</div>
 					</div>
-					<div ref={ref} className={`transition-all p-2 -ml-[75px] bg-white/[0.5] backdrop-blur-[8px] h-[98%] rounded border ${expand ? 'scale-x-1' : 'scale-x-0 opacity-0'}`}>
+					<div ref={ref} className={`transition-all p-2 -ml-[255px] bg-white/[0.5] backdrop-blur-[8px] h-[98%] rounded border ${expand ? 'scale-x-1' : 'scale-x-0 opacity-0'}`}>
 						<div className="flex items-center h-[50px] p-2">
-							<img src="/logo.svg" alt="" className="h-[30px]" />
+							<img src={logo} alt="" className="h-[30px]" />
 							<div className="ml-5 text-lg font-bold">Kaleidoscope</div>
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 hover:scale-[1.1] cursor-pointer ml-10" onClick={() => setExpand(false)}>
 								<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -73,17 +76,21 @@ function SideBar({ setImage, image }: any) {
 				</>
 				:
 				<>
-					<div className={`transition-all h-full p-2 ${expand ? 'scale-x-0 opacity-0' : 'scale-x-1'}`}>
-						<div className="p-5 bg-white/[0.5] backdrop-blur-[8px] rounded border cursor-pointer" onClick={() => setExpand(true)}>
+					<div className={`transition-all h-full p-2 ${expand ? 'scale-x-0 opacity-0' : 'scale-y-1'}`}>
+						<div className="p-5 bg-white/[0.5] flex items-center justify-between backdrop-blur-[8px] rounded border cursor-pointer" onClick={() => setExpand(true)} style={{ width: window.innerWidth - 15 }}>
+							<div className="flex items-center">
+								<img src={logo} alt="" className="h-[30px]" />
+								<div className="ml-5 text-lg font-bold">Kaleidoscope</div>
+							</div>
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
 								<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 							</svg>
 						</div>
 					</div>
-					<div ref={ref} className={`transition-all p-2 -ml-[75px] bg-white/[0.5] backdrop-blur-[8px] mt-1 h-fit rounded border ${expand ? 'scale-x-1' : 'scale-x-0 opacity-0'}`} style={{ width: window.innerWidth - 15 }}>
+					<div ref={ref} className={`transition-all p-2 absolute ml-[5px] bg-white/[0.5] backdrop-blur-[8px] mt-1 h-fit rounded border ${expand ? 'scale-x-1' : 'scale-x-0 opacity-0'}`} style={{ width: window.innerWidth - 15 }}>
 						<div className="flex items-center h-[50px] w-full justify-between p-2">
 							<div className="flex items-center">
-								<img src="/logo.svg" alt="" className="h-[30px]" />
+								<img src={logo} alt="" className="h-[30px]" />
 								<div className="ml-5 font-bold">Kaleidoscope</div>
 							</div>
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 hover:scale-[1.1] cursor-pointer ml-10" onClick={() => setExpand(false)}>
