@@ -19,15 +19,12 @@ function Space({ image }: any) {
                     </div>
                 </div>
                 :
-                <div className="w-full h-full scale-[0.7] -ml-[20vh] -mt-[20vh]">
+                <div className="w-full h-full scale-[1.5]">
                     <div className="flex flex-col gap-[21.6vh]">
                         <Row rotate={false} image={image} />
                         <Row rotate={true} image={image} />
                         <Row rotate={false} image={image} />
                         <Row rotate={true} image={image} />
-                        <Row rotate={false} image={image} />
-                        <Row rotate={true} image={image} />
-                        <Row rotate={false} image={image} />
                     </div>
                 </div>
             }
@@ -38,24 +35,42 @@ function Space({ image }: any) {
 function Row({ rotate, image }: any) {
     return (
         <>
-            {rotate ?
-                <div className="flex gap-[49.8vh]">
-                    <Triangles rotate={false} image={image} />
-                    <Triangles rotate={true} image={image} />
-                    <Triangles rotate={false} image={image} />
-                    <Triangles rotate={true} image={image} />
-                    <Triangles rotate={false} image={image} />
-                    <Triangles rotate={true} image={image} />
-                </div>
+            {window.innerWidth > 450 ?
+                <>
+                    {rotate ?
+                        <div className="flex gap-[49.8vh]">
+                            <Triangles rotate={false} image={image} />
+                            <Triangles rotate={true} image={image} />
+                            <Triangles rotate={false} image={image} />
+                            <Triangles rotate={true} image={image} />
+                            <Triangles rotate={false} image={image} />
+                            <Triangles rotate={true} image={image} />
+                        </div>
+                        :
+                        <div className="flex gap-[49.8vh]">
+                            <Triangles rotate={true} image={image} />
+                            <Triangles rotate={false} image={image} />
+                            <Triangles rotate={true} image={image} />
+                            <Triangles rotate={false} image={image} />
+                            <Triangles rotate={true} image={image} />
+                            <Triangles rotate={false} image={image} />
+                        </div>
+                    }
+                </>
                 :
-                <div className="flex gap-[49.8vh]">
-                    <Triangles rotate={true} image={image} />
-                    <Triangles rotate={false} image={image} />
-                    <Triangles rotate={true} image={image} />
-                    <Triangles rotate={false} image={image} />
-                    <Triangles rotate={true} image={image} />
-                    <Triangles rotate={false} image={image} />
-                </div>
+                <>
+                    {rotate ?
+                        <div className="flex gap-[49.8vh]">
+                            <Triangles rotate={false} image={image} />
+                            <Triangles rotate={true} image={image} />
+                        </div>
+                        :
+                        <div className="flex gap-[49.8vh]">
+                            <Triangles rotate={true} image={image} />
+                            <Triangles rotate={false} image={image} />
+                        </div>
+                    }
+                </>
             }
         </>
     )

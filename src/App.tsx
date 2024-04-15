@@ -6,7 +6,7 @@ import logo from './image/logo.svg'
 function App() {
 
 	const [image, setImage] = useState('chromatic_cascade')
-	console.log(navigator.userAgent)
+
 	return (
 		<div className="h-[100vh] overflow-hidden relative">
 			<SideBar setImage={setImage} image={image} />
