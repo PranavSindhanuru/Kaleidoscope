@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import chromatic_cascade from '../image/chromatic_cascade.jpg'
 import chromatic_fusion from '../image/chromatic_fusion.webp'
 import crimson_riptide from '../image/crimson_riptide.jpg'
