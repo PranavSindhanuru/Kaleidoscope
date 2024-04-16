@@ -15,9 +15,7 @@ function App() {
 					<div className="py-2 px-4 bg-white/[0.5] backdrop-blur-[8px] rounded border">Made with ❤ by <span className="font-semibold">Pranav</span></div>
 				</div>
 				:
-				<div className="absolute z-20 bottom-1 right-1 cursor-pointer" onClick={() => window.open('https://www.linkedin.com/in/pranavsindhanuru/', '_blank')}>
-					<div className="py-1 px-4 bg-white/[0.5] backdrop-blur-[8px] rounded border text-sm">Made with ❤ by <span className="font-semibold">Pranav</span></div>
-				</div>
+				<></>
 			}
 			<Space image={image} />
 		</div>
@@ -105,6 +103,9 @@ function SideBar({ setImage, image }: any) {
 							<div className={`p-2 pr-5 rounded hover:bg-white/[0.7] cursor-pointer ${image === 'molten_swirl' ? 'bg-white/[0.7]' : ''}`} onClick={() => setImage('molten_swirl')}>Molten Swirl</div>
 							<div className={`p-2 pr-5 rounded hover:bg-white/[0.7] cursor-pointer ${image === 'shimmering_strands' ? 'bg-white/[0.7]' : ''}`} onClick={() => setImage('shimmering_strands')}>Shimmering Strands</div>
 							<div className={`p-2 pr-5 rounded hover:bg-white/[0.7] cursor-pointer ${image === 'tidal_gradient' ? 'bg-white/[0.7]' : ''}`} onClick={() => setImage('tidal_gradient')}>Tidal Gradient</div>
+							<div className="cursor-pointer" onClick={() => window.open('https://www.linkedin.com/in/pranavsindhanuru/', '_blank')}>
+								<div className="py-2 px-4 bg-white/[0.5] backdrop-blur-[8px] rounded border text-sm">Made with ❤ by <span className="font-semibold">Pranav</span></div>
+							</div>
 						</div>
 					</div>
 				</>
