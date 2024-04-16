@@ -28,10 +28,10 @@ function Space({ image }: any) {
                 :
                 <div className="w-full h-full scale-[1.5]">
                     <div className="flex flex-col gap-[21.6vh]">
-                        <Row rotate={false} image={image} />
                         <Row rotate={true} image={image} />
                         <Row rotate={false} image={image} />
                         <Row rotate={true} image={image} />
+                        <Row rotate={false} image={image} />
                     </div>
                 </div>
             }
