@@ -5,12 +5,12 @@ import molten_swirl from '../image/molten_swirl.jpg'
 import shimmering_strands from '../image/shimmering_strands.jpg'
 import tidal_gradient from '../image/tidal_gradient.jpg'
 
-import chromatic_cascade_small from '../image/chromatic_cascade.svg'
-import chromatic_fusion_small from '../image/chromatic_fusion.svg'
-import crimson_riptide_small from '../image/crimson_riptide.svg'
-import molten_swirl_small from '../image/molten_swirl.svg'
-import shimmering_strands_small from '../image/shimmering_strands.svg'
-import tidal_gradient_small from '../image/tidal_gradient.svg'
+import chromatic_cascade_small from '../image/chromatic_cascade_small.jpg'
+import chromatic_fusion_small from '../image/chromatic_fusion_small.webp'
+import crimson_riptide_small from '../image/crimson_riptide_small.jpg'
+import molten_swirl_small from '../image/molten_swirl_small.jpg'
+import shimmering_strands_small from '../image/shimmering_strands_small.jpg'
+import tidal_gradient_small from '../image/tidal_gradient_small.jpg'
 
 function Space({ image }: any) {
     return (
